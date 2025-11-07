@@ -1,0 +1,141 @@
+/* ======== GLOBAL "TRON" STYLES ======== */
+
+/* Define our theme colors */
+:root {
+    --color-black: #000000;
+    --color-dark-blue: #0a192f; /* A very dark, deep blue */
+    --color-light-gray: #ccc;   /* Main text color */
+    --color-white: #ffffff;
+    --color-tron-blue: #00CFFC; /* The bright, electric blue */
+}
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* This makes the page scroll smoothly when you click a nav link */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--color-black);
+    color: var(--color-light-gray);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: var(--color-white);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    /* This creates the glowing blue underline for section titles */
+    border-bottom: 2px solid var(--color-tron-blue);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+section {
+    /* Each section has space */
+    padding: 100px 10%; /* 100px top/bottom, 10% left/right */
+}
+
+a {
+    color: var(--color-tron-blue);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Add a glow effect on hover */
+a:hover {
+    color: var(--color-white);
+    text-shadow: 0 0 10px var(--color-tron-blue);
+}
+
+/* ======== HEADER & NAVIGATION ======== */
+header {
+    background-color: var(--color-dark-blue);
+    padding: 1rem 10%;
+    /* This makes the nav bar stick to the top */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    /* A subtle blue line under the nav */
+    border-bottom: 1px solid var(--color-tron-blue);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-white);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-left: 25px;
+}
+
+nav a {
+    font-weight: bold;
+}
+
+/* ======== HERO SECTION ======== */
+#hero {
+    /* This makes the hero section fill the screen */
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 4rem;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: 2px solid var(--color-tron-blue);
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: var(--color-tron-blue);
+    color: var(--color-dark-blue);
+    text-shadow: none; /* Turn off shadow for the filled button */
+}
+
+/* ======== FOOTER ======== */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--color-dark-blue);
+    color: #8892b0; /* A muted gray-blue */
+    margin-top: 50px;
+    border-top: 1px solid var(--color-tron-blue);
+}
