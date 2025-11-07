@@ -130,6 +130,26 @@ nav a {
     text-shadow: none; /* Turn off shadow for the filled button */
 }
 
+/* ======== PROJECT PAGE STYLES ======== */
+
+#projects-page {
+    /* We can re-use the 'section' padding, but add more if we like */
+    padding: 100px 10%;
+}
+
+.project-item {
+    background-color: var(--color-dark-blue); /* A dark blue background for each project */
+    padding: 25px;
+    margin-bottom: 30px; /* Space between projects */
+    border-left: 4px solid var(--color-tron-blue); /* A 'Tron' accent line */
+    border-radius: 5px;
+}
+
+.project-item h3 {
+    color: var(--color-tron-blue); /* Make the project titles glow blue */
+    margin-bottom: 10px;
+}
+
 /* ======== FOOTER ======== */
 footer {
     text-align: center;
