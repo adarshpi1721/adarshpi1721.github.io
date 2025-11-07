@@ -1,6 +1,3 @@
-/* ======== GOOGLE FONT IMPORT (FOR LATEX FONT) ======== */
-@import url('https://fonts.googleapis.com/css2?family=Latin+Modern+Roman&display=swap');
-
 /* ======== GLOBAL "TRON" STYLES ======== */
 
 /* Define our theme colors */
@@ -140,9 +137,8 @@ nav a {
     margin-bottom: 10px;
 }
 
-/* LaTeX Font Style */
+/* LaTeX Font Style is REMOVED */
 .project-item p {
-    font-family: 'Latin Modern Roman', serif;
     font-size: 1.1rem;
     color: var(--color-light-gray);
 }
