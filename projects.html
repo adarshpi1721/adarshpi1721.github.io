@@ -12,35 +12,98 @@
             <div class="logo">Adarsh Pai</div>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
                 <li><a href="interests.html">Interests</a></li>
-                <li><a href="experience.html">Experience</a></li> <li><a href="contact.html">Contact</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
         <section id="projects-page">
             <h2>Projects</h2>
-            
+
+            <!-- Biomimicry of Fish Locomotion -->
             <div class="project-item">
+                <div class="project-image-placeholder">Image Placeholder</div>
+                <h3>Biomimicry of Fish Locomotion</h3>
+                <p>
+                    Ongoing undergraduate research where I work on understanding and improving
+                    the propulsive performance of flapping foils using morphing. I developed 
+                    ALE-based 2D models to study morphing–pitching–heaving motion and showed 
+                    that morphing can increase thrust by up to 31% and efficiency by 12%. 
+                    I also extended this work to a tandem-foil setup to replicate fish schools 
+                    and analyzed the wake using DMD.
+                </p>
+                <a href="fish-locomotion.html" class="project-button">View More Details</a>
+            </div>
+
+            <!-- Ornithopter -->
+            <div class="project-item">
+                <div class="project-image-placeholder">Image Placeholder</div>
                 <h3>Ornithopter</h3>
-                <p>The goal of this project was to replicate the flapping motion used by birds and integrate it into RC aircraft, and compare their performance with fixed-wing RC aircraft. Our goal was ot increase the overall thrust coefficient (with a secondary focus on efficiency) of the airplane. </p></p>
+                <p>
+                    I led the design of a dual-crank flapping mechanism to replicate controlled bird-like motion.
+                    Later, I integrated trailing-edge morphing to improve thrust and stability, and we achieved
+                    a stable 7-second flight. This project is where my interest in biomimicry and unsteady aerodynamics really began.
+                </p>
                 <a href="ornithopter.html" class="project-button">View More Details</a>
             </div>
-            
+
+            <!-- Morphing Foil / FMFP + PoF -->
             <div class="project-item">
-                <h3>Enhancement of the propulsive performance of foils using trailing-edge morphing</h3>
-                <p>This project</p>
+                <div class="project-image-placeholder">Image Placeholder</div>
+                <h3>Trailing-Edge Morphing for Enhanced Propulsive Performance</h3>
+                <p>
+                    This work focuses on understanding how chordwise trailing-edge morphing affects thrust,
+                    lift, and power. The study was presented at FMFP ’24 and later submitted to 
+                    Physics of Fluids. The main idea is that active flexibility can help flapping foils 
+                    adapt to their flow environment and consistently generate higher thrust.
+                </p>
                 <a href="morphing-wing.html" class="project-button">View More Details</a>
             </div>
 
+            <!-- VIV Suppression -->
             <div class="project-item">
-                <h3>Suppression of VIV for Cylinders Using Passive Methods</h3>
-                <p>(This is a short summary of the VIV project, describing the main goal and outcome.)</p>
+                <div class="project-image-placeholder">Image Placeholder</div>
+                <h3>Suppression of Vortex-Induced Vibrations (VIV)</h3>
+                <p>
+                    As part of this project, I helped set up a low-speed wind tunnel facility and performed 
+                    validation tests on airfoils and cylinders (up to 96% accuracy). I also developed an 
+                    OpenFOAM solver to simulate the VIV response of a 2D cylinder and studied passive 
+                    techniques to suppress the vibrations.
+                </p>
                 <a href="viv.html" class="project-button">View More Details</a>
             </div>
+
+            <!-- Rarefied Gas Dynamics / IITB Thesis -->
+            <div class="project-item">
+                <div class="project-image-placeholder">Image Placeholder</div>
+                <h3>Ytterbium Beam Collimation — Rarefied Gas Dynamics</h3>
+                <p>
+                    For my thesis at IIT Bombay, I analyze how Knudsen-number-dependent effects influence 
+                    beam directionality and flux distribution. The goal is to improve the collimation of 
+                    ytterbium beams, which has applications in precision biomedical imaging and diagnostics.
+                </p>
+                <a href="ybic-thesis.html" class="project-button">View More Details</a>
+            </div>
+
+            <!-- DHIO Internship -->
+            <div class="project-item">
+                <div class="project-image-placeholder">Image Placeholder</div>
+                <h3>Drone Rotor Flow & Graphene Heat Conduction (DHIO Internship)</h3>
+                <p>
+                    During this internship, I applied my CFD background to industry-scale problems using 
+                    ParticleWorks and ASAP. I worked on simulating flow around drone-rotor tips and studied 
+                    conduction in graphene nanoribbons, adapting my academic CFD experience to real-world setups.
+                </p>
+                <a href="dhio.html" class="project-button">View More Details</a>
+            </div>
+
         </section>
     </main>
+
     <footer>
         <p>© 2025 Adarsh Pai. Built from scratch.</p>
     </footer>
