@@ -7,10 +7,28 @@
     <link rel="stylesheet" href="style.css">
     <style>
         /* Page-specific icon & hover tweaks (keeps global CSS unchanged) */
+        /* Force first row to 3 columns on wide screens */
         .interest-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(3, 1fr); /* 3 cards in first row on wide screens */
             gap: 20px;
+        }
+
+        /* medium screens: 2 columns */
+        @media (max-width: 1000px) {
+            .interest-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* small screens: 1 column */
+        @media (max-width: 720px) {
+            .interest-list {
+                grid-template-columns: 1fr;
+            }
+
+            .icon-wrap { width: 48px; height: 48px; min-width: 48px; }
+            .icon { width: 22px; height: 22px; }
         }
 
         .interest-card {
@@ -92,12 +110,6 @@
             color: var(--color-light-gray);
             font-size: 0.95rem;
         }
-
-        /* Responsive tweaks */
-        @media (max-width: 720px) {
-            .icon-wrap { width: 48px; height: 48px; min-width: 48px; }
-            .icon { width: 22px; height: 22px; }
-        }
     </style>
 </head>
 <body>
@@ -159,8 +171,8 @@
                             I enjoy the solitude of court practice and the precision of each point.
                         </p>
                         <p>
-                            Federer is timeless to watch; Sinner is a current favorite. The sport is a quiet refuge
-                            and a mental reset between intense research sprints.
+                            Federer is timeless to watch; Sinner is a current favorite. It's probably my favorite sport
+                            to watch.
                         </p>
                     </div>
                 </article>
@@ -181,8 +193,8 @@
                             almost any other.
                         </p>
                         <p>
-                            I prefer books that change how you see people or practice—those that linger and shape
-                            decisions long after the last page.
+                            I prefer books that change how you see people or practice, especially those that linger 
+                            and shape decisions long after the last page.
                         </p>
                     </div>
                 </article>
@@ -199,7 +211,7 @@
                         <h3>Sketching</h3>
                         <p>
                             I moved from semi-realism to anatomy studies; sketching forces careful observation of
-                            form and proportion. It’s a practice that improves patience and attention to small details.
+                            form and proportion. It’s a practice that enhances patience and attention to detail.
                         </p>
                         <p>
                             Sketching complements engineering—both reward repeated practice and a habit of looking more closely.
@@ -219,8 +231,8 @@
                         <h3>Piano</h3>
                         <p>
                             Piano was a big part of my childhood. I learned Für Elise on an old keyboard and still
-                            play pieces I enjoy. These days it’s mostly for pleasure—not rigorous practice—but
-                            it remains a comforting creative outlet.
+                            play pieces I enjoy. These days it’s mostly for pleasure, but it remains a comforting
+                            creative outlet.
                         </p>
                         <p>
                             Music is one of the few things that brings me back to a quiet, reflective state.
@@ -234,10 +246,10 @@
             <div class="reading-box" aria-labelledby="reading-heading">
                 <h4 id="reading-heading">What I’m reading / books that stayed with me</h4>
                 <ul class="reading-list">
-                    <li><strong>Notes from Underground</strong> — Fyodor Dostoevsky</li>
-                    <li><strong>Nicomachean Ethics</strong> — Aristotle</li>
-                    <li><strong>Meditations</strong> — Marcus Aurelius / Epictetus (stoic selections)</li>
-                    <li><strong>Selected Essays</strong> — Ralph Waldo Emerson</li>
+                    <li><strong>In the Buddha's Words</strong> — Bhikkhu Bodhi</li>
+                    <li><strong>The Blade Itself</strong> — Joe Abercrombie</li>
+                    <li><strong>Nichomachean Ethics</strong> — Aristotle</li>
+                    <li><strong>Stranger</strong> — Albert Camus</li>
                 </ul>
             </div>
 
