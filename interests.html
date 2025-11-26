@@ -5,6 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adarsh Pai - Interests</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Page-specific icon & hover tweaks (keeps global CSS unchanged) */
+        .interest-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .interest-card {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+            border: 1px solid rgba(0,123,255,0.06);
+            padding: 16px;
+            border-radius: 10px;
+            transition: transform 180ms ease, box-shadow 180ms ease;
+        }
+
+        .interest-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 30px rgba(2,6,23,0.45);
+        }
+
+        .icon-wrap {
+            width: 56px;
+            height: 56px;
+            min-width: 56px;
+            border-radius: 10px;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(135deg, rgba(0,123,255,0.06), rgba(6,15,30,0.06));
+            border: 1px solid rgba(0,123,255,0.08);
+            transition: transform 180ms ease, background 180ms ease;
+        }
+
+        .interest-card:hover .icon-wrap {
+            transform: scale(1.06);
+            background: linear-gradient(135deg, rgba(0,123,255,0.12), rgba(6,15,30,0.08));
+        }
+
+        .icon {
+            width: 28px;
+            height: 28px;
+            display: block;
+            fill: rgba(159,191,255,0.95);
+        }
+
+        .interest-body h3 {
+            margin: 0 0 8px 0;
+            color: var(--color-white);
+            font-size: 1.05rem;
+        }
+
+        .interest-body p {
+            margin: 0 0 6px 0;
+            color: var(--color-light-gray);
+            line-height: 1.5;
+            font-size: 0.97rem;
+        }
+
+        /* Reading box */
+        .reading-box {
+            margin-top: 28px;
+            padding: 14px;
+            border-radius: 10px;
+            background: linear-gradient(180deg, rgba(0,123,255,0.02), rgba(255,255,255,0.01));
+            border: 1px solid rgba(0,123,255,0.06);
+        }
+
+        .reading-box h4 {
+            margin: 0 0 10px 0;
+            color: var(--color-white);
+            font-size: 1rem;
+        }
+
+        .reading-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .reading-list li {
+            margin: 8px 0;
+            color: var(--color-light-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 720px) {
+            .icon-wrap { width: 48px; height: 48px; min-width: 48px; }
+            .icon { width: 22px; height: 22px; }
+        }
+    </style>
 </head>
 <body>
 
@@ -26,78 +120,125 @@
         <section id="interests-page">
             <h2>Interests</h2>
 
-            <div class="project-item">
-                <h3>Philosophy</h3>
-                <p>
-                    Philosophy is probably the non-technical subject I care about the most. I tend to gravitate toward
-                    ethics, existentialism, and the philosophy of religion—fields that try to answer what it means to 
-                    live well and honestly. What I enjoy most is understanding how thinkers arrive at their ideas: 
-                    the assumptions they make, the experiences that shaped them, and how their logic unfolds.
-                </p>
-                <p>
-                    Epictetus taught me to focus on what I can control. Aristotle’s view of deliberate virtue 
-                    changed the way I think about habit. Dostoevsky forces you to confront uncomfortable parts 
-                    of human nature, while Emerson feels like a reminder to remain self-directed. Schopenhauer’s 
-                    pessimism, oddly enough, is grounding. Philosophy matters to me because it directly shapes how 
-                    people think, act, and grow.
-                </p>
+            <div class="interest-list">
+
+                <!-- Philosophy -->
+                <article class="interest-card">
+                    <div class="icon-wrap" aria-hidden="true">
+                        <!-- omega / philosophy icon -->
+                        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Philosophy icon">
+                            <path d="M12 2c-1.1 0-2 .9-2 2v2.2C8.16 6.8 6.36 8.75 6.36 11H4l4 4 4-4H9.64c0-1.78 1.28-3.28 3-3.72V20h2V5c0-1.1-.9-2-2-2z"/>
+                        </svg>
+                    </div>
+                    <div class="interest-body">
+                        <h3>Philosophy</h3>
+                        <p>
+                            I read ethics, existentialism, and philosophy of religion—subjects that force you to
+                            examine assumptions and build a worldview from first principles. I enjoy tracing how
+                            thinkers like Epictetus, Aristotle, and Dostoevsky reach their conclusions.
+                        </p>
+                        <p>
+                            Philosophy has shaped my approach to setbacks, habits, and the ethical side of design—
+                            it’s practical thinking about how to live and how to act well in research and life.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Tennis -->
+                <article class="interest-card">
+                    <div class="icon-wrap" aria-hidden="true">
+                        <!-- tennis racket icon -->
+                        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tennis icon">
+                            <path d="M21 3l-6 6-3 1-1 3-6 6-2-2 6-6 3-1 1-3 6-6 2 2zM7 17l-1 1 1 1 1-1-1-1z"/>
+                        </svg>
+                    </div>
+                    <div class="interest-body">
+                        <h3>Tennis</h3>
+                        <p>
+                            I’ve played since childhood. Tennis is where strategy, rhythm, and focus come together.
+                            I enjoy the solitude of court practice and the precision of each point.
+                        </p>
+                        <p>
+                            Federer is timeless to watch; Sinner is a current favorite. The sport is a quiet refuge
+                            and a mental reset between intense research sprints.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Reading -->
+                <article class="interest-card">
+                    <div class="icon-wrap" aria-hidden="true">
+                        <!-- book icon -->
+                        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Book icon">
+                            <path d="M18 2H6a2 2 0 0 0-2 2v15a1 1 0 0 0 1.5.86L12 17l6.5 2.86A1 1 0 0 0 20 19V4a2 2 0 0 0-2-2z"/>
+                        </svg>
+                    </div>
+                    <div class="interest-body">
+                        <h3>Reading</h3>
+                        <p>
+                            I read widely, with a soft spot for classic literature that explores human motives and
+                            moral complexity. Books let you step into another mind—an experience I value more than
+                            almost any other.
+                        </p>
+                        <p>
+                            I prefer books that change how you see people or practice—those that linger and shape
+                            decisions long after the last page.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Sketching -->
+                <article class="interest-card">
+                    <div class="icon-wrap" aria-hidden="true">
+                        <!-- pencil / sketch icon -->
+                        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sketch icon">
+                            <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                        </svg>
+                    </div>
+                    <div class="interest-body">
+                        <h3>Sketching</h3>
+                        <p>
+                            I moved from semi-realism to anatomy studies; sketching forces careful observation of
+                            form and proportion. It’s a practice that improves patience and attention to small details.
+                        </p>
+                        <p>
+                            Sketching complements engineering—both reward repeated practice and a habit of looking more closely.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Piano -->
+                <article class="interest-card">
+                    <div class="icon-wrap" aria-hidden="true">
+                        <!-- music note / piano icon -->
+                        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Music icon">
+                            <path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/>
+                        </svg>
+                    </div>
+                    <div class="interest-body">
+                        <h3>Piano</h3>
+                        <p>
+                            Piano was a big part of my childhood. I learned Für Elise on an old keyboard and still
+                            play pieces I enjoy. These days it’s mostly for pleasure—not rigorous practice—but
+                            it remains a comforting creative outlet.
+                        </p>
+                        <p>
+                            Music is one of the few things that brings me back to a quiet, reflective state.
+                        </p>
+                    </div>
+                </article>
+
             </div>
 
-            <div class="project-item">
-                <h3>Tennis</h3>
-                <p>
-                    Tennis has been a part of my life ever since I was a kid. I grew up playing casually and it has 
-                    stayed with me as something I genuinely enjoy—both playing and watching. Tennis is very personal; 
-                    you’re alone on the court, constantly adapting and thinking through each point. It’s a mix of 
-                    strategy, rhythm, and focus that I find calming.
-                </p>
-                <p>
-                    Federer will always be my favorite to watch—he made tennis look effortless. These days, I follow 
-                    Jannik Sinner quite closely. The sport has always been a small refuge for me, a way to reset and 
-                    clear my head.
-                </p>
-            </div>
-
-            <div class="project-item">
-                <h3>Reading</h3>
-                <p>
-                    Books have influenced me more than almost anything else. I read a lot of classic literature, not 
-                    because it’s old, but because older books tend to be more honest about human nature. They force you 
-                    to engage with ideas that aren’t always comfortable or straightforward.
-                </p>
-                <p>
-                    What I enjoy most is that reading lets you inhabit someone else’s mind. Every book reflects the 
-                    writer’s personality, fears, and worldview. Some books stay with you long after you finish them 
-                    because they arrive at the exact moment you needed them.
-                </p>
-            </div>
-
-            <div class="project-item">
-                <h3>Sketching</h3>
-                <p>
-                    I started sketching seriously in high school and slowly moved from semi-realism to anatomy drawing. 
-                    Sketching forces you to slow down and really observe details—the shapes, proportions, and subtle 
-                    asymmetries that you’d otherwise miss.
-                </p>
-                <p>
-                    In a strange way, it overlaps with engineering: both require patience, careful observation, and a 
-                    willingness to iterate. These days I mostly draw anatomy because it’s structured enough to improve 
-                    with practice but open enough to stay creative.
-                </p>
-            </div>
-
-            <div class="project-item">
-                <h3>Piano</h3>
-                <p>
-                    Piano was a big part of my childhood. I learned Für Elise using an old electric keyboard that lit 
-                    up the keys, and I still remember the feeling of playing it from start to finish for the first time. 
-                    Music has always been tied to nostalgia for me.
-                </p>
-                <p>
-                    Now I play mostly for fun—usually songs I like rather than anything too technical. It’s something 
-                    I come back to whenever I want a break or when I feel like doing something creative without any 
-                    pressure to “improve.”
-                </p>
+            <!-- Small reading box -->
+            <div class="reading-box" aria-labelledby="reading-heading">
+                <h4 id="reading-heading">What I’m reading / books that stayed with me</h4>
+                <ul class="reading-list">
+                    <li><strong>Notes from Underground</strong> — Fyodor Dostoevsky</li>
+                    <li><strong>Nicomachean Ethics</strong> — Aristotle</li>
+                    <li><strong>Meditations</strong> — Marcus Aurelius / Epictetus (stoic selections)</li>
+                    <li><strong>Selected Essays</strong> — Ralph Waldo Emerson</li>
+                </ul>
             </div>
 
         </section>
