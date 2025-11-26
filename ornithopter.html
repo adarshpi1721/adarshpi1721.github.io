@@ -1,33 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adarsh Pai - Ornithopter</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ornithopter — Adarsh Pai</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Adarsh Pai</div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="interests.html">Interests</a></li>
-                <li><a href="experience.html">Experience</a></li> <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="project-detail">
-            <h2>Ornithopter</h2>
-            <p>(All the detailed information, images, videos, and technical specs for the Ornithopter project go here.)</p>
-            <br>
-            <a href="projects.html" class="project-button">← Back to All Projects</a>
-        </section>
-    </main>
-    <footer>
-        <p>© 2025 Adarsh Pai. Built from scratch.</p>
-    </footer>
+  <header>
+    <nav>
+      <div class="logo">Adarsh Pai</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="interests.html">Interests</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <section id="project-detail">
+        <h2>Ornithopter — active flapping design</h2>
+
+        <div class="project-image-placeholder">Image Placeholder</div>
+
+        <p><strong>Summary —</strong> I led the design and build of a small active flapping ornithopter. The goal was hands-on: design a robust dual-crank mechanism that can produce repeatable, controllable flapping kinematics, integrate simple morphing at the trailing edge, and learn what physical design choices actually matter in real flight (not just on paper).</p>
+
+        <h3>Approach</h3>
+        <p>We started with a mechanical dual-crank design for reliable amplitude and phase control. Prototyping was iterative: laser-cut frames, 3D-printed joints, and a compact actuation setup using hobby servos and a lightweight transmission. After achieving mechanically repeatable motion on the bench, we added an active trailing-edge morphing element to study its effect on thrust and stability in free flight tests.</p>
+
+        <h3>Flight tests & outcomes</h3>
+        <p>Initial bench tests confirmed the kinematics were close to the target profiles. In flight, the ornithopter achieved a documented 7-second stable flight during test conditions with calm winds. The morphing trailing edge improved controllability during takeoff and slightly increased thrust during the downstroke, which matched trends predicted by our CFD work.</p>
+
+        <h3>Challenges & practical lessons</h3>
+        <p>Flight testing exposed everything — slight asymmetries in build, misaligned linkages, and servo backlash. The biggest lesson was that mechanical precision and repeatability matter more than theoretical elegance when you want repeatable flights. Weight management was critical; we had to iterate on material choice and packing geometry to keep the aircraft light while maintaining structural stiffness.</p>
+
+        <h3>What I learned</h3>
+        <p>This project taught me systems thinking — how mechanical design, kinematics, material choices, and control all interact. It reinforced the value of rapid iteration: build small, test, learn, and refine. The ornithopter is where my interest in biomimicry moved from simulation to physical validation.</p>
+
+        <p>
+          <a href="projects.html" class="project-button">Back to Projects</a>
+          <a href="ornithopter-data.zip" class="project-button" style="margin-left:10px;">Build notes & logs</a>
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Adarsh Pai. Built from scratch.</p>
+  </footer>
 </body>
 </html>
