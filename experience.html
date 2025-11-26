@@ -7,45 +7,55 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header>
+    <nav>
+        <div class="logo">Adarsh Pai</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="interests.html">Interests</a></li>
+            <li><a href="experience.html" class="active">Experience</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <header>
-        <nav>
-            <div class="logo">Adarsh Pai</div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="interests.html">Interests</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<main>
+<div class="container">
+<section id="experience-page">
+    <h2>Experience</h2>
 
-    <main>
-        <section id="experience-page">
-            <h2>Experience</h2>
-            
-            <div class="project-item">
-                <h3>Vice President, Aerodynamics Club</h3>
-                <p>(Short description of your role, responsibilities, and key achievements.)</p>
-            </div>
-            
-            <div class="project-item">
-                <h3>Teaching Assistant</h3>
-                <p>(Short description of the course(s) you were a TA for and what you did.)</p>
-            </div>
+    <!-- IIT Bombay Thesis -->
+    <div class="project-item">
+        <div class="project-image-placeholder">Image Placeholder</div>
+        <h3>Thesis Student — IIT Bombay</h3>
+        <p>
+            Working on Ytterbium beam collimation in the rarefied gas regime. I study how Knudsen-number 
+            effects impact directionality and flux distribution, using a mix of analytical models and 
+            simulation. Applications include biomedical imaging and precision diagnostics.
+        </p>
+        <a href="ybic-thesis.html" class="project-button">View Details</a>
+    </div>
 
-            <div class="project-item">
-                <h3>Internship</h3>
-                <p>(Short description of your internship, the company, and your main projects.)</p>
-            </div>
+    <!-- DHIO Internship -->
+    <div class="project-item">
+        <div class="project-image-placeholder">Image Placeholder</div>
+        <h3>Research Intern — DHIO Research & Engineering</h3>
+        <p>
+            Applied CFD tools like ParticleWorks and ASAP to industry problems. I simulated drone rotor 
+            tip flows to analyze losses and noise signatures, and performed thermal conduction studies 
+            on graphene nanoribbons. Learned how to deliver fast, reliable results in an engineering 
+            workflow.
+        </p>
+        <a href="dhio.html" class="project-button">View Details</a>
+    </div>
 
-        </section>
-    </main>
+</section>
+</div>
+</main>
 
-    <footer>
-        <p>© 2025 Adarsh Pai. Built from scratch.</p>
-    </footer>
-
+<footer>
+    <p>© 2025 Adarsh Pai. Built from scratch.</p>
+</footer>
 </body>
 </html>
