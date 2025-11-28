@@ -169,11 +169,16 @@ nav a.active {
 
 /* Optional one-line tagline under title */
 .project-tagline {
-  margin: 0 0 6px 0;
+  margin: 0 0 8px 0;
   font-size: 0.95rem;
-  color: #9fb0ff;
   font-style: italic;
+  color: #66ccff;
+  text-shadow:
+    0 0 6px rgba(102, 204, 255, 0.9),
+    0 0 14px rgba(0, 123, 255, 0.6),
+    0 0 24px rgba(0, 123, 255, 0.35);
 }
+
 
 /* Main project text */
 .project-item p {
