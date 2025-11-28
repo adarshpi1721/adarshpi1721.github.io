@@ -30,38 +30,44 @@
              class="project-image" />
 
         <p><strong>Summary —</strong>
-          This project looks at how chordwise trailing-edge morphing can improve the propulsive
-          performance of a flapping foil. I used an ALE-based 2D solver to combine morphing with
-          pitching–heaving motion, and studied how morph timing and amplitude affect thrust,
-          efficiency, and wake structure. Well-timed morphing produced gains of roughly 31% in
-          thrust and noticeable improvements in efficiency.
+
+          The goal of this project was to analyse the effects of trailing-edge morphing foils by
+          adding it to flapping foils. In layman's terms, adding flexibility to an airfoil that 
+          rotates about its leading edge (front) and moves vertically. By analysing different 
+          configurations of morphing, I found out that this layer of flexibility can improve 
+          thrust by around 35% and efficiency by 12%. To increase this even further, I realized
+          that analyzing these foils in fish schools might be very beneficial. So, a simplified
+          tandem model was analysed, and it turns out we could increase the efficiency by 525! compared 
+          to our original flapping foil (although it isn't an apples-to-apples comparison ;P
         </p>
 
-        <h3>Approach</h3>
+        <h3>Motication</h3>
         <p>
-          I started with a baseline pitching–heaving kinematic and added morphing as an additional,
-          controllable degree of freedom. I then:
+          I knew that there were very few successful replications of fish locomotion. Even the best ones,
+          didn't nearly come close to actually replicating fish motion. My goal was basically to start off
+          with a simpler problem (which is how all great problems are solved), and try to get to the ideal 
+          undulatory motion (the one used by fish). This is also why the current project is ongoing. With 
+          morphing, we figured out that the thrust and efficiency can come close to that of undulatory foils
+          but it still isn't good enough (ended where I started from)
         </p>
-        <ul>
-          <li>Ran parametric sweeps over morph amplitude and phase relative to the heaving motion.</li>
-          <li>Computed time-averaged thrust, lift, and power coefficients for each case.</li>
-          <li>Used DMD on wake snapshots to understand which flow modes were strengthened or weakened by morphing.</li>
-        </ul>
+        
 
         <h3>Key findings</h3>
         <p>
-          The main result was that morph timing is critical: morphing that reinforces the formation
-          of thrust-producing vortices can significantly boost performance, while poorly timed
-          morphing can actually hurt thrust. The wake structure in the best cases showed a stronger
-          and more coherent reverse von Kármán street.
+          Flexibility actually improves thrust and efficiency! In fact, by a decent enough margin that it can
+          be a viable solution for UAVs in the future (although it is not quite there yet). I found that when 
+          morphing can increase thrust by around 35% and efficiency by 12%. Additionally, when it interacts with
+          other vortices, the morphing foil can increase its own thrust and efficiency by a substantial margin. 
+          Interestingly, the trends for thrust, power, and efficiency end up remaining similar.
         </p>
 
         <h3>What I learned</h3>
         <p>
-          This project taught me how sensitive unsteady propulsion is to phase relationships, and
-          how small changes in geometry and timing can completely change the wake. It also gave me
-          experience in building interpretable CFD setups and using modal analysis tools like DMD to
-          explain why a given configuration performs better.
+          The scientific method! It was a great learning experience for me and served as a pivotal moment in my 
+          career as a researcher. After being stuck for days trying to figure out how morphing affects the flow 
+          physics, I finally realized that it affects the flow around it in a similar manner, irrespective of the 
+          flow conditions. I am not sure if I can give out more info than this since the journal manuscript is only 
+          been submitted.
         </p>
 
         <a href="projects.html" class="project-button">Back to Projects</a>
