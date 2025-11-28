@@ -369,3 +369,26 @@ section > p + h2 {
   margin-top: 1.1rem;
 }
 
+/* ======== CONTACT PAGE STYLES ======== */
+
+.contact-links {
+  margin-top: 30px;
+}
+
+.contact-links a {
+  display: inline-block;
+  margin: 10px 20px 10px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: 2px solid var(--color-tron-blue);
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.contact-links a:hover {
+  background-color: var(--color-tron-blue);
+  color: var(--color-dark-blue);
+}
+
+
