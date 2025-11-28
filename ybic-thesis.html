@@ -25,24 +25,35 @@
       <section id="project-detail">
         <h2>Ytterbium Beam Collimation — Rarefied Gas Dynamics</h2>
 
-        <p><strong>Summary —</strong> For my thesis work at IIT Bombay I study how rarefied gas effects (Knudsen-number dependence) influence beam collimation for ytterbium sources. This work connects gas-kinetic behavior with practical beam shaping goals relevant to biomedical imaging and precision instrumentation.</p>
+        <p><strong>Summary —</strong>
+          For my thesis at IIT Bombay I study how rarefied gas effects (through the Knudsen number)
+          influence the collimation of ytterbium beams. The work connects gas-kinetic behavior with
+          beam shaping needs in precision imaging and instrumentation.
+        </p>
 
         <h3>Approach</h3>
-        <p>I analyze beam properties using models that capture molecular mean-free-path effects, and run parametric simulations to see how background pressure, nozzle geometry, and source conditions change directionality and flux distribution. The project uses analytical theory where possible and particle-based or DSMC-like approaches where continuum assumptions break down.</p>
+        <p>
+          I use models that account for molecular mean free path and run parametric simulations over
+          background pressure, nozzle geometry, and source conditions. The idea is to see how these
+          parameters affect directionality and flux distribution and to identify combinations that
+          lead to well-collimated beams.
+        </p>
 
-        <h3>Preliminary findings</h3>
-        <p>Beam directionality and flux uniformity are very sensitive to Knudsen number near transitional regimes. Small geometric tweaks (nozzle lip shape, expansion chamber size) can significantly change beam spread. This suggests hardware-level optimizations are critical before attempting expensive optical correction schemes.</p>
-
-        <h3>Challenges & lessons</h3>
-        <p>Rarefied flows require different intuition than continuum CFD. Numerically, DSMC-style approaches are costly, so careful selection of reduced-order models and a hybrid approach (analytic + particle) is often necessary. I learned to combine approximate analytic models with targeted high-fidelity runs to get actionable guidance.</p>
+        <h3>Key observations</h3>
+        <p>
+          Near transitional regimes, small geometric tweaks can noticeably change beam spread and
+          uniformity. This suggests that careful nozzle design and operating conditions can provide
+          significant gains before relying on downstream optical corrections.
+        </p>
 
         <h3>What I learned</h3>
-        <p>The project expanded my understanding of multi-regime flow physics and taught me to balance theory, simulation cost, and practical objectives. It also exposed me to application-driven modeling constraints, which is useful for translational research.</p>
-
         <p>
-          <a href="experience.html" class="project-button">Back to Experience</a>
-          <a href="ybic-notes.zip" class="project-button" style="margin-left:10px;">Thesis notes</a>
+          The project pushed me to think beyond standard continuum CFD and work with rarefied models.
+          It has also been a good exercise in balancing analytical approximations, computational cost,
+          and the practical requirements of an experimental setup.
         </p>
+
+        <a href="experience.html" class="project-button">Back to Experience</a>
       </section>
     </div>
   </main>
